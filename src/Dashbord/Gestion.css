@@ -1,0 +1,23 @@
+.gestion-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Utilisez la hauteur de la fenêtre pour que le contenu prenne toute la hauteur */
+}
+
+.dashboard-body-container {
+  display: flex;
+  flex-grow: 1; /* Permet au contenu de remplir l'espace disponible */
+}
+
+/* Styles pour Tableaudebord.css */
+.tableau-de-bord {
+  width: 250px; /* Ou la largeur que vous voulez pour le tableau de bord */
+  /* D'autres styles spécifiques pour le tableau de bord */
+}
+
+/* Styles pour Body.css */
+.body-content {
+  flex-grow: 1; /* Permet au contenu de prendre l'espace restant */
+  overflow-y: auto; /* Ajoute un défilement si le contenu dépasse la hauteur */
+  /* D'autres styles spécifiques pour le contenu principal */
+}

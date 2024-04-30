@@ -1,0 +1,32 @@
+/* text.css */
+.welcome-container {
+    font-family: 'Sans-serif';
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .main-title {
+    font-weight: bold;
+    font-size: 24px; /* Ajustez la taille selon votre design */
+  }
+  
+  .subtitle {
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  .continue-button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: 'pointer';
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  /* Ajoutez ici d'autres styles personnalisés nécessaires pour correspondre à votre design */
+  

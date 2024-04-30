@@ -1,0 +1,50 @@
+.paiement-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+}
+
+.form-group input[type="number"],
+.form-group input[type="text"],
+.form-group input[type="file"],
+.form-group select {
+  border-radius: 5px;
+  border: 1px solid var(--color-border);
+  padding: 8px;
+}
+
+button[type="submit"] {
+  border-radius: 5px;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.upload-box {
+  border: 2px dashed var(--color-border);
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+}
+
+.upload-icon {
+  /* Styles pour l'icône de téléchargement */
+}
+
+/* Utilisation des variables CSS pour maintenir la cohérence des couleurs */
+:root {
+  --color-primary: #4CAF50; /* Vert principal */
+  --color-secondary: #45a049; /* Vert secondaire */
+  --color-border: #ccc; /* Couleur de la bordure */
+}

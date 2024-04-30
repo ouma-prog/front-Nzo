@@ -1,0 +1,73 @@
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa; /* Couleur de fond légère comme dans l'image */
+  }
+  
+  .profile-card {
+    width: 80%; /* Adapté à la taille de la carte dans l'image */
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px; /* Bords arrondis */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profile-details {
+    width: 100%; /* Prend toute la largeur */
+  }
+  
+  .profile-details .field {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .profile-details .field label {
+    font-weight: bold;
+  }
+  
+  .profile-details input[type="text"],
+  .profile-details input[type="email"],
+  .profile-details input[type="tel"] {
+    width: 60%; /* Zone de texte plus large que le label */
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .upload-button {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem; /* Ajouter de l'espace au-dessus du bouton */
+  }
+  
+  button.update-button {
+    background: #007BFF; /* Couleur bleue pour le bouton de mise à jour */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Styles supplémentaires pour les boutons 'Edit' si nécessaires */
+  .edit-button {
+    background: #ffc107; /* Couleur jaune pour les boutons d'édition */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-left: 1rem; /* Espacement à gauche du bouton */
+  }
+  
+  /* Assurez-vous que les classes sont correctement assignées dans votre JSX */
+  
