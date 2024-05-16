@@ -1,7 +1,7 @@
 import React from 'react';
 
 const styles = {
-  Input: {
+  Select: {
     top: '289px',
     left: '905px',
     width: '217px',
@@ -21,11 +21,15 @@ const styles = {
   },
 };
 
-const InputField = (props) => {
-  const { placeholder } = props; // Utilisez la prop placeholder
+const InputSelect = (props) => {
+  const { options, ...rest } = props; // Récupérer toutes les autres props
   return (
-    <input style={styles.Input} placeholder={placeholder} {...props} /> // Transmettez toutes les props à l'élément input
+    <select style={styles.Select} {...rest}>
+      {options.map(option => (
+        <option key={option.value} value={option.value}>{option.label}</option>
+      ))}
+    </select>
   );
 };
 
-export default InputField;
+export default InputSelect;

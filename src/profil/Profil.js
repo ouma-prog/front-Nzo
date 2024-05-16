@@ -1,47 +1,22 @@
-
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
+import Header from '../Composants/Header'; 
+import Sidebar from '../Composants/ProfilSidebar';
+import ProfilContent from '../Composants/ProfilContent';
 import { useLocation } from 'react-router-dom';
 
-function Profil() {
-    const [user, setUser] = useState(null);
-    const [error, setError] = useState('');
+const Profil = () => {
     const location = useLocation();
     const { state } = location;
-
-    useEffect(() => {
-        if (state && state.email) {
-            fetchUserData(state.email);
-        }
-    }, [state]);
-
-    const fetchUserData = async (email) => {
-        try {
-            const response = await axios.get(`http://localhost:3003/api/profil?email=${email}`);
-            setUser(response.data);
-            setError('');
-        } catch (error) {
-            setError('Erreur lors de la récupération des données de l\'utilisateur.');
-            console.error('Erreur lors de la récupération des données de l\'utilisateur:', error);
-        }
-    };
+    const user = state && state.user;
 
     return (
-        <div>
-            <h1>Mon Compte </h1>
-
-            {error && <p>{error}</p>}
-
-            {user && (
-                <div>
-                    
-                    <p>Nom: {user.nom}</p>
-                    <p>Prénom: {user.prenom}</p>
-                    <p>Postnom: {user.postnom}</p>
-                    <p>email :{user.email}</p>
-                </div>
-            )}
+      <div>
+        <Header />
+        <div className="flex">
+          <Sidebar />
+          <ProfilContent user={user} /> {/* Passez l'utilisateur comme une propriété à ProfilContent */}
         </div>
+      </div>
     );
 }
 

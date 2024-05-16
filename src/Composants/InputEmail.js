@@ -15,7 +15,7 @@ const baseStyles = {
   outline: 'none',
 };
 
-const InputField = ({ type, placeholder, onChange, value, name }) => {
+const InputEmail = ({ type, placeholder, onChange, value, name }) => {
   // Les styles spécifiques aux instances d'InputField sont appliqués ici
   const inputStyles = {
     ...baseStyles,
@@ -39,9 +39,9 @@ const InputField = ({ type, placeholder, onChange, value, name }) => {
   );
 };
 
-InputField.defaultProps = {
+InputEmail.defaultProps = {
   type: 'text', // par défaut à 'text' s'il n'est pas fourni
   placeholder: 'Identifiant ou Email*',
 };
 
-export default InputField;
+export default InputEmail;

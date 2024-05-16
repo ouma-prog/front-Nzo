@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'; 
 import InputEmail from '../Composants/InputEmail';
-import InputField from '../Composants/InputEmail';
+import InputField from '../Composants/inputFiled';
 import Inputpassword from '../Composants/inputpassword';
 import Button from '../Composants/Bouton';
 import Text from '../Composants/Text';
@@ -49,7 +49,7 @@ function Register() {
         <div className="relative flex flex-col items-center justify-center min-h-screen">
         <div className="flex items-center justify-center">
             <img src={pcimg} alt="PC" className="mr-8 h-auto max-h-full" />
-            <form onSubmit={handleSubmit} className="w-full max-w-md px-8 py-10 bg-white bg-opacity-90 rounded shadow-md"> 
+            <form onSubmit={handleSubmit} className="w-full max-w-md px-2 py-8 bg-white bg-opacity-90 rounded shadow-md"> 
                 <Text text="LA GESTION IMMOBILIÈRE FACILE" className="mb-8 text-3xl text-center font-bold" />
                 
                 

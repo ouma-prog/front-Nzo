@@ -7,11 +7,10 @@ import Formulaire from './formulaire/Formulaire';
 import NewPassword from './newpassword/Newpassword';
 import Paiement from './paiement/Paiment';
 import WelcomePage from './welcomePage/WelcomePage';
-import Gestion from './Dashbord/Gestion';
 import Profil from './profil/Profil';
-import Form from './form-inscrip/Form';
 import Suivi from './suivipaiement/Suivi';
-
+import Dashboard from './Dashborad/Dashborad';
+import CheckEmail from './login/Checkemail/ChekEmail';
 function App() {
   return (
     <Router>
@@ -22,13 +21,15 @@ function App() {
           <Route path="/forgotpassword" element={<Forgotpassword />} />
           <Route path="/formulaire" element={<Formulaire />} />
           <Route path="/formulaire" element={<Formulaire />} />
-          <Route path="/newpassword/resetToken" element={<NewPassword/>} />
+          <Route path="/newpassword/:resetToken" element={<NewPassword />} />
           <Route path="/paiement" element={<Paiement />} />
           <Route path="/welcomePage" element={<WelcomePage />} />
-          <Route path="/gestion" element={<Gestion />} />
           <Route path="/profil" element={<Profil />} />
-          <Route path="/form" element={<Form />} />
           <Route path="/suivi" element={<Suivi />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/checkemail" element={<CheckEmail />} />
+
+
 
 
 

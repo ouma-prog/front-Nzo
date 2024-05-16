@@ -9,6 +9,7 @@ import loginFond from "../images/fondlogin.png";
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [errorMessage, setErrorMessage] = useState(''); // État pour stocker les messages d'erreur
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
@@ -19,11 +20,13 @@ function Login() {
                 password,
             });
             console.log(response.data);
-            // Si la connexion est réussie, naviguez vers le profil de l'utilisateur.
-            navigate('/profil', { state: { email: response.data.email } });
-        } catch (error) {
+            // Si la connexion est réussie, naviguez vers le tableau de bord.
+            navigate('/dashboard ');
+                } catch (error) {
             // Gérer les erreurs ici, par exemple en affichant un message à l'utilisateur
-            console.error(error.response ? error.response.data : error.message);
+            const errorResponse = error.response ? error.response.data : error.message;
+            console.error(errorResponse);
+            setErrorMessage('Identifiant ou mot de passe incorrect'); // Définit le message d'erreur
         }
     };
 
@@ -52,6 +55,7 @@ function Login() {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
+                    {errorMessage && <div className="text-red-500 text-sm text-center">{errorMessage}</div>}
                     <div className="text-sm text-green-600 hover:underline cursor-pointer text-right"
                          onClick={handleForgotPassword}>
                         Mot de passe oublié

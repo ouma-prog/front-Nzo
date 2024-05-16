@@ -1,8 +1,7 @@
 import React from 'react';
 import Header from '../Composants/Header'; 
 import Sidebar from '../Composants/Sidebar';
-import PaiementContent from '../Composants/PaiementContent';
-
+import ValidationPage from '../Composants/Validationpage';
 const paiement= () => {
  
 
@@ -11,7 +10,7 @@ const paiement= () => {
       <Header/> 
       <div className="flex">
         <Sidebar />
-        <PaiementContent /> 
+        <ValidationPage /> 
       </div>
     </div>
   );
